@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ public class signUpActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     FirebaseDatabase database ;
     ProgressDialog progressDialog ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,5 +64,12 @@ public class signUpActivity extends AppCompatActivity {
                     });
                 }
             });
+        binding.tvalreadyAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(signUpActivity.this ,signInActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
