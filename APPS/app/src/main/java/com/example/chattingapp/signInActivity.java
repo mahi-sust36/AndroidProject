@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.example.chattingapp.Models.Users;
@@ -33,6 +34,7 @@ public class signInActivity extends AppCompatActivity {
     FirebaseDatabase database ;
 
     GoogleSignInClient mGoogleSignInClient ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
